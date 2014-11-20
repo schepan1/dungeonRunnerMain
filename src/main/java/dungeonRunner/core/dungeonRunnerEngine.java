@@ -58,7 +58,7 @@ public class dungeonRunnerEngine extends BasicGame {
 	public static Input inputHandler;
 	public static boolean gameHasBeenStarted;
 	public static dungeonRunnerStates currentState;
-	public static float fdelta; 		// fdelta geteilt durch 50 um ungefähre Sekunden zu berechnen.
+	public static float fdelta; 		// fdelta geteilt durch 50 um ungefï¿½hre Sekunden zu berechnen.
 	public static Graphics g;
 	public static int posXMouse;
 	public static int posYMouse;
@@ -246,7 +246,7 @@ public class dungeonRunnerEngine extends BasicGame {
 		map009.addSimpleTransferEvent(4, 15, "You entered a new Room",  -3);
 		map009.addSimpleTransferEvent(18, 20, "You entered a new Room", -4);
 		
-		// Map mit Gegnerm füllen
+		// Map mit Gegnerm fï¿½llen
 		map001.addBatList1();
 		map001.addBatList2();
 		map001.addBatList3();
@@ -256,7 +256,7 @@ public class dungeonRunnerEngine extends BasicGame {
 		
 		map003.addCasterOfSand2();
 		
-		// Map mit NPC füllen
+		// Map mit NPC fï¿½llen
 		map001.addBatNPCAnimalBat();
 		map006.addBatNPCCorpse(11f, 7.5f);
 		map009.addBatNPCRolan();

@@ -143,10 +143,10 @@ public class Player {
 		// TransferProzess
 		try{
 		if (currentMap.isDoor(Player.x + 32, Player.y + 32 + dungeonRunnerEngine.fdelta)) {
-			dungeonRunnerEngine.mapSet.get(currentMap.ID).blocked = null; // Alte Map berechnung wird zurückgesetzt.
+			dungeonRunnerEngine.mapSet.get(currentMap.ID).blocked = null; // Alte Map berechnung wird zurï¿½ckgesetzt.
 			currentMap.transfer.play(0.5f, 0.4f);						  // Transfer Sound
 			schritte = 0;
-			currentMap = dungeonRunnerEngine.mapSet.get(currentMap.ID+1); //Hier wird nächste Map initalisiert.
+			currentMap = dungeonRunnerEngine.mapSet.get(currentMap.ID+1); //Hier wird nï¿½chste Map initalisiert.
 			currentMap.init();
 			dungeonRunnerEngine.currentMap = this.currentMap;
 			Player.x = currentMap.spawnX*32;
@@ -154,7 +154,7 @@ public class Player {
 		}
 		
 		if (currentMap.isBack(Player.x + 32, Player.y + 32 + dungeonRunnerEngine.fdelta)) {
-			dungeonRunnerEngine.mapSet.get(currentMap.ID).blocked = null;	// Alte Map berechnung wird zurückgesetzt.
+			dungeonRunnerEngine.mapSet.get(currentMap.ID).blocked = null;	// Alte Map berechnung wird zurï¿½ckgesetzt.
 			currentMap.transfer.play(0.5f, 0.4f);							 // Transfer Sound
 			schritte = 0;
 			currentMap = dungeonRunnerEngine.mapSet.get(currentMap.ID-1);  //Hier wird vorherige Map initalisiert.
@@ -221,7 +221,7 @@ public class Player {
 		if (dungeonRunnerEngine.inputHandler.isKeyDown(Input.KEY_W)) {
 
 			if ( !checkIntersection() && !(currentMap.isBlocked(x, y - dungeonRunnerEngine.fdelta) || currentMap.isBlocked(x + SIZE - 1, y - dungeonRunnerEngine.fdelta))  ) {
-				y -= dungeonRunnerEngine.fdelta +3;
+				y -= dungeonRunnerEngine.fdelta;
 				Player.ausrichtung = dungeonRunnerPlayerLookState.North;
 				schritte += 0.05f;
 			    isMoving = true;
@@ -231,7 +231,7 @@ public class Player {
 
 			if (!checkIntersection() && !(currentMap.isBlocked(x, y + SIZE + dungeonRunnerEngine.fdelta) || currentMap.isBlocked(x + SIZE - 1, y + SIZE+ dungeonRunnerEngine.fdelta)) ) {
 
-				y += dungeonRunnerEngine.fdelta +3;
+				y += dungeonRunnerEngine.fdelta ;
 				Player.ausrichtung = dungeonRunnerPlayerLookState.South;
 				schritte += 0.05f;
 				isMoving = true;
@@ -241,7 +241,7 @@ public class Player {
 
 			if (!checkIntersection() && !(currentMap.isBlocked(x - dungeonRunnerEngine.fdelta, y) || currentMap.isBlocked(x - dungeonRunnerEngine.fdelta, y + SIZE - 1)) ) {
 
-				x -= dungeonRunnerEngine.fdelta +3;
+				x -= dungeonRunnerEngine.fdelta ;
 				Player.ausrichtung = dungeonRunnerPlayerLookState.West ;
 				schritte += 0.05f;
 				isMoving = true;
@@ -251,7 +251,7 @@ public class Player {
 
 			if (!checkIntersection() &&!(currentMap.isBlocked(x + SIZE + dungeonRunnerEngine.fdelta, y) || currentMap.isBlocked(x + SIZE + dungeonRunnerEngine.fdelta, y + SIZE- 1)) ) {
 
-				x += dungeonRunnerEngine.fdelta +3;
+				x += dungeonRunnerEngine.fdelta ;
 				Player.ausrichtung = dungeonRunnerPlayerLookState.East;
 				schritte += 0.05f;
 				isMoving = true;

@@ -118,7 +118,7 @@ public class RolanNPC extends NPC {
 		movementFreQ += dungeonRunnerEngine.fdelta;
 		
 		
-//		// Sorgt dafür dass die Gegner nicht durch Wände laufen können und dass sich die Gegner auf den Spieler zu bewegen.
+//		// Sorgt dafï¿½r dass die Gegner nicht durch Wï¿½nde laufen kï¿½nnen und dass sich die Gegner auf den Spieler zu bewegen.
 //		if((Math.round(x * 100) /100.0f) <= (Math.round(Player.x * 100 ) / 100.0f) && !(currentMap.isBlocked(x + SIZE + dungeonRunnerEngine.fdelta, y) || currentMap.isBlocked(x + SIZE + dungeonRunnerEngine.fdelta, y + SIZE- 1))){
 //			x+= moveSpeedX;
 //		
@@ -142,7 +142,7 @@ public class RolanNPC extends NPC {
 		if(movementFreQ >= 200){ //700
 			rand = rnd.nextInt(4); 
 			
-			rand = 0;
+		//	rand = 0;
 						
 			if(rand == 0){
 				moveDown = true;
