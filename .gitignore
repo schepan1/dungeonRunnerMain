@@ -4,7 +4,6 @@ ehthumbs.db
 
 # Mein Kram
 *.classpath
-*.project
 *.prefs
 # Folder config file
 Desktop.ini
